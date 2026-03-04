@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "demo": "npx playwright test tests/demo/mytest.spec.ts",
-    "login": "npx playwright test tests/functional/login.spec.ts"
+    "login": "npx playwright test tests/functional/login.spec.ts",
+    "make-appt": "npx playwright test tests/functional/make.apptmt.spec.ts",
+    "inventory": "npx playwright test tests/functional/inventory.spec.ts --headed",
+    "inv:tag": "npx playwright test --grep @smoke"
   },
   "keywords": [
     "Automation",
@@ -20,6 +23,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.2.3"
+    "@types/node": "^25.2.3",
+    "allure-playwright": "^3.5.0",
+    "dotenv": "^17.3.1"
   }
 }

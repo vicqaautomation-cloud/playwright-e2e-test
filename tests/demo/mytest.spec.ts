@@ -11,7 +11,16 @@ test("Should load homepage with correct title", async ({ page }) => {
   // 3. Assert header text
   await expect(page.locator("//h1")).toHaveText("CURA Healthcare Service");
 });
-test(" test should do something ", {tag: "@smoke"}, async ({ page }) => { 
+test(" test should do something ", async ({ page }) => { 
   // steps...
 
+})
+test(" API login ", async ({ request }) => { 
+  // steps...
+  await request.post('signin/', {
+    data: {
+      username: 'admin',
+      password: 'pass'
+    }
+  })
 })
